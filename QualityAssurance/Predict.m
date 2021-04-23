@@ -1,6 +1,6 @@
 function p = Predict(theta, X)
-%   Computes the predictions for X using a 
-%   threshold at 0.5.
+% Computes the predictions for X using a 
+% threshold at 0.5.
 
 m = size(X, 1); % Number of training examples
 

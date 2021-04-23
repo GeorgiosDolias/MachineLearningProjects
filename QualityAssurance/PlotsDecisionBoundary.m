@@ -1,10 +1,10 @@
-function PlotDecisionBoundary(theta, X, y)
-%   Plots the data points with + for the positive (accepted) examples and
-%   x for the negative (rejected) examples. X is assumed to be 
-%   a either 
-%   1) Mx3 matrix, where the first column is an all-ones column for the 
+function PlotsDecisionBoundary(theta, X, y)
+% Plots the data points with + for the positive (accepted) examples and
+% x for the negative (rejected) examples. X is assumed to be 
+% a either 
+% 1) Mx3 matrix, where the first column is an all-ones column for the 
 %      intercept.
-%   2) MxN, N>3 matrix, where the first column is all-ones
+% 2) MxN, N>3 matrix, where the first column is all-ones
 
 % Plot Data
 PlotData(X(:,2:3), y);
@@ -18,10 +18,10 @@ if size(X, 2) <= 3
     plot_y = (-1./theta(3)).*(theta(2).*plot_x + theta(1));
 
     % Plot, and adjust axes for better viewing
-    plot(plot_x, plot_y)
+    plot(plot_x, plot_y,'Color',[0.5,0.7,0.9])
     
-    % Legend, specific for the exercise
-    legend('Admitted', 'Not admitted', 'Decision Boundary')
+    % Legend
+    legend('Admitted', 'Not admitted', 'Decision Boundary','FontSize',12,'TextColor','blue','LineWidth',1.0)
     axis([30, 100, 30, 100])
 else
     % Here is the grid range
